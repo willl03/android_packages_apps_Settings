@@ -71,4 +71,9 @@
     <string name="recents_clear_all_location_right">Top right</string>
     <string name="recents_clear_all_location_left">Top left</string>
 
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">Camera shutter sounds</string>
+    <string name="camera_sounds_summary">Enable system camera, video and screenshot shutter sounds</string>
+    <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country.</string>
+
 </resources>

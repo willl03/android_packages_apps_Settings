@@ -57,4 +57,9 @@
     <string name="timeout_1000">1 second</string>
     <string name="timeout_500">0,5 second</string>
 
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">Camera shutter sounds</string>
+    <string name="camera_sounds_summary">Enable system camera, video and screenshot shutter sounds</string>
+    <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country.</string>
+
 </resources>

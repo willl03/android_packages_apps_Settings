@@ -37,9 +37,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
 
     private Preference mQSTiles;
 
+    private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
+    private ListPreference mSmartPulldown;
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;
 
@@ -52,6 +54,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
         mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
         mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
             Settings.System.SHOW_CLEAR_ALL_RECENTS, 1, UserHandle.USER_CURRENT) == 1);
@@ -65,6 +68,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
         updateRecentsLocation(location);
 
         mQSTiles = findPreference("qs_order");
+
+        // Smart Pulldown
+        mSmartPulldown.setOnPreferenceChangeListener(this);
+        int smartPulldown = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_SMART_PULLDOWN, 0);
+        mSmartPulldown.setValue(String.valueOf(smartPulldown));
+        updateSmartPulldownSummary(smartPulldown);
     }
 
     @Override
@@ -79,7 +89,14 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mRecentsClearAll) {
+         if (preference == mSmartPulldown) {
+            int smartPulldown = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_SMART_PULLDOWN,
+                    smartPulldown);
+            updateSmartPulldownSummary(smartPulldown);
+            return true;
+        } else if (preference == mRecentsClearAll) {
             boolean show = (Boolean) newValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.SHOW_CLEAR_ALL_RECENTS, show ? 1 : 0, UserHandle.USER_CURRENT);
@@ -92,6 +109,31 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    private void updateSmartPulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Smart pulldown deactivated
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
+        } else {
+            String type = null;
+            switch (value) {
+                case 1:
+                    type = res.getString(R.string.smart_pulldown_dismissable);
+                    break;
+                case 2:
+                    type = res.getString(R.string.smart_pulldown_persistent);
+                    break;
+                default:
+                    type = res.getString(R.string.smart_pulldown_all);
+                    break;
+            }
+            // Remove title capitalized formatting
+            type = type.toLowerCase();
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
+        }
     }
 
     private void updateRecentsLocation(int value) {

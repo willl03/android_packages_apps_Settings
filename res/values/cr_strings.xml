@@ -188,4 +188,10 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Unlock</string>
 
+    <!-- Lockscreen Shortcuts -->
+    <string name="lockscreen_shortcuts_title">Top lockscreen shortcuts</string>
+    <string name="lockscreen_shortcuts_title_bottom">Bottom lockscreen shortcuts</string>
+    <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
+
 </resources>

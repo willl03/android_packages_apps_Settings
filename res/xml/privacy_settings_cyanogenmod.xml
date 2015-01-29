@@ -23,6 +23,13 @@
             android:summary="@string/privacy_guard_manager_summary"
             android:fragment="com.android.settings.privacyguard.PrivacyGuardManager" />
 
+         <!-- App Ops -->
+         <Preference
+            android:fragment="com.android.settings.applications.AppOpsSummary"
+            android:key="appops"
+            android:summary="@string/app_ops_summary"
+            android:title="@string/app_ops_settings" />
+
         <PreferenceScreen
             android:key="blacklist"
             android:title="@string/blacklist_title"

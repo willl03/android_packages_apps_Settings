@@ -384,11 +384,6 @@ public class PrivacyGuardManager extends Fragment
                 mPreferences.edit().putBoolean(prefName, item.isChecked()).commit();
                 scheduleAppsLoad();
                 return true;
-            case R.id.advanced:
-                Intent i = new Intent(Intent.ACTION_MAIN);
-                i.setClass(mActivity, AppOpsSummaryActivity.class);
-                mActivity.startActivity(i);
-                return true;
             default:
                 return super.onContextItemSelected(item);
         }

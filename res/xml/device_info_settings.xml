@@ -132,6 +132,12 @@
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />
 
+        <!-- W03 Slim version -->
+        <Preference android:key="w03_info"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/w03_slim_title"
+                android:summary="@string/w03_slim_desc"/>
+
         <!-- Device firmware version -->
         <Preference android:key="firmware_version" 
                 style="?android:preferenceInformationStyle"

@@ -12,6 +12,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- W03 Slim Version -->
+    <string name="w03_slim_title">W03 CM12</string>
+    <string name="w03_slim_desc">Modified by willl03</string>
+
     <!-- AppOps additions -->
     <string name="app_ops_summary">Use the original AppOps to manage permissions"</string>
 

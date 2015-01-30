@@ -154,6 +154,14 @@
                 android:icon="@drawable/ic_settings_buttons"
                 />
 
+        <!-- LockClock -->
+        <dashboard-tile
+                android:key="lock_clock"
+                android:fragment="com.android.settings.w03.LockClock"
+                android:title="@string/lock_clock_title"
+                android:icon="@drawable/ic_settings_lock_clock"
+                />
+
         <!-- Storage -->
         <dashboard-tile
                 android:id="@+id/storage_settings"

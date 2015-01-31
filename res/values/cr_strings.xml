@@ -6,7 +6,7 @@
     <string name="attention">Attention</string>
 
     <!-- Sound settings -->
-    <string name="advanced_sound_title">Advanced options</string>
+    <string name="advanced_sound_title">SlimRoms options</string>
     <string name="sound_title">Sound</string>
 
     <!-- Safe headset volume restore checkbox -->
@@ -34,7 +34,7 @@
     <string name="volume_keys_control_media_stream_summary">Volume keys control media volume rather than notifications</string>
 
     <!-- Keyboard and Input ASS methods  -->
-    <string name="title_keyboard_input">Advanced options</string>
+    <string name="title_keyboard_input">SlimRoms options</string>
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
     <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>

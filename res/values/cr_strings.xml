@@ -71,4 +71,7 @@
     <string name="recents_clear_all_location_right">Top right</string>
     <string name="recents_clear_all_location_left">Top left</string>
 
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">Camera and screenshot sounds</string>
+
 </resources>

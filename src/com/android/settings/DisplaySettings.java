@@ -210,8 +210,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (isDozeAvailable(activity)) {
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
             mDozePreference.setOnPreferenceChangeListener(this);
-        } else {
-            removePreference(KEY_DOZE);
         }
 
         mTapToWake = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
@@ -705,9 +703,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     if (!isLiftToWakeAvailable(context)) {
                         result.add(KEY_LIFT_TO_WAKE);
                     }
-                    if (!isDozeAvailable(context)) {
-                        result.add(KEY_DOZE);
-                    }
+                    result.add(KEY_DOZE);
                     return result;
                 }
             };

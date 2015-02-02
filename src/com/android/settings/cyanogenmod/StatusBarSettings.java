@@ -15,20 +15,28 @@
  */
 package com.android.settings.cyanogenmod;
 
+import android.os.Bundle;
+import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.content.res.Configuration;
-import android.os.Bundle;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.text.format.DateFormat;
+import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Toast;
 
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
 
 public class StatusBarSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {

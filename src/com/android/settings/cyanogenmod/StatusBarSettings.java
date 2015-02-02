@@ -20,6 +20,7 @@ import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.content.res.Configuration;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.preference.ListPreference;
@@ -29,6 +30,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.text.format.DateFormat;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.text.TextUtils;
@@ -63,6 +65,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.status_bar_settings);
 
+        PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
         PackageManager pm = getPackageManager();

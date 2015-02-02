@@ -63,6 +63,13 @@
             android:title="@string/lockscreen_shortcuts_title_bottom"
             android:summary="@string/lockscreen_shortcuts_summary_bottom" />
 
+        <!-- Lockscreen weather -->
+        <SwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lock_show_weather_title"
+            android:summary="@string/lock_show_weather_summary"
+            android:defaultValue="true" />
+
         <PreferenceScreen
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:key="owner_info_settings"

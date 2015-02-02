@@ -917,7 +917,7 @@
 
     <!-- Weather in status bar header -->
     <string name="status_bar_show_weather_title">Show weather</string>
-    <string name="status_bar_show_weather_summary">Show the weather above the Quick Settings panel</string>
+    <string name="status_bar_show_weather_summary">Show the weather above the Quick Settings panel. To change the unit system used, go to cLock weather panel.</string>
 
     <string name="qs_category_title">Quick Settings panel</string>
 

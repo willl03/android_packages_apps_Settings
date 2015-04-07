@@ -30,6 +30,12 @@
         android:summary="@string/status_bar_show_weather_summary"
         android:defaultValue="true" />
 
+     <!-- cLock -->
+     <PreferenceScreen
+        android:key="lock_clock"
+        android:fragment="com.android.settings.w03.LockClock"
+        android:title="@string/lock_clock_title" />
+
     <PreferenceCategory
         android:title="@string/qs_category_title">
 

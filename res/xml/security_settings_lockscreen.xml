@@ -38,7 +38,6 @@
         <PreferenceScreen
                  android:key="lockscreen_shortcuts"
                  android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
-                 android:summary="@string/lockscreen_shortcuts_summary"
                  android:title="@string/lockscreen_shortcuts_title">
              <extra android:name="actionMode" android:value="4" />
              <extra android:name="maxAllowedActions" android:value="5" />
@@ -63,7 +62,6 @@
         <SwitchPreference
             android:key="lockscreen_weather"
             android:title="@string/lock_show_weather_title"
-            android:summary="@string/lock_show_weather_summary"
             android:defaultValue="true" />
 
     </PreferenceCategory>

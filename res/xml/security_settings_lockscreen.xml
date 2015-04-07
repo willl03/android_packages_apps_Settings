@@ -58,6 +58,14 @@
             android:title="@string/lockscreen_visualizer_title"
             android:defaultValue="true"
             settings:advanced="true"/>
+
+        <!-- Lockscreen weather -->
+        <SwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lock_show_weather_title"
+            android:summary="@string/lock_show_weather_summary"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

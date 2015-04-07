@@ -51,6 +51,13 @@
                 android:title="@string/lockscreen_shortcuts_title_bottom"
                 settings:advanced="true"/>
 
+        <!-- Lockscreen weather -->
+        <SwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lock_show_weather_title"
+            android:summary="@string/w03_requires_reboot"
+            android:defaultValue="true" />
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
                 android:key="lockscreen_visualizer"
                 android:title="@string/lockscreen_visualizer_title"

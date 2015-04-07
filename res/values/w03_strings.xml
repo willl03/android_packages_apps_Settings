@@ -25,6 +25,7 @@
     <string name="disable_fc_notifications_summary">This will hide all force close pop-ups</string>
 
     <!-- Lock clock -->
+    <string name="w03_requires_reboot">Requires reboot</string>
     <string name="lock_clock_title">cLock settings</string>
     <string name="lock_clock_summary">Access cLock settings, in there you can change the system-wide weather unit system.</string>
     <string name="lock_clock_clock_section_title">Clock and alarm</string>

@@ -25,7 +25,8 @@
     <string name="disable_fc_notifications_summary">This will hide all force close pop-ups</string>
 
     <!-- Lock clock -->
-    <string name="lock_clock_title">cLock</string>
+    <string name="lock_clock_title">cLock settings</string>
+    <string name="lock_clock_summary">Access cLock settings, in there you can change the system-wide weather unit system.</string>
     <string name="lock_clock_clock_section_title">Clock and alarm</string>
     <string name="lock_clock_clock_section_summary">View or change how the clock of the cLock widget will display</string>
     <string name="lock_clock_weather_section_title">Weather panel</string>

@@ -41,6 +41,7 @@
      <PreferenceScreen
         android:key="lock_clock"
         android:fragment="com.android.settings.w03.LockClock"
+        android:summary="@string/lock_clock_summary"
         android:title="@string/lock_clock_title" />
 
     <PreferenceCategory

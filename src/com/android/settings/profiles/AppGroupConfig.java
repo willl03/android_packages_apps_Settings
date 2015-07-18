@@ -19,8 +19,7 @@ package com.android.settings.profiles;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.NotificationGroup;
-import android.app.ProfileManager;
-import android.content.Context;
+import cyanogenmod.app.ProfileManager;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -30,7 +29,6 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -83,7 +81,7 @@ public class AppGroupConfig extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mProfileManager = (ProfileManager) getActivity().getSystemService(PROFILE_SERVICE);
+        mProfileManager = ProfileManager.getInstance(getActivity());
         addPreferencesFromResource(R.xml.application_list);
 
         final Bundle args = getArguments();

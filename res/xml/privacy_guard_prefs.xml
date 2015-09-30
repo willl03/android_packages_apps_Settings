@@ -27,6 +27,6 @@
         android:key="privacy_guard_notification"
         android:title="@string/privacy_guard_notification_title"
         android:summary="@string/privacy_guard_notifiation_summary"
-        android:defaultValue="true"/>
+        android:defaultValue="true" />
 
 </PreferenceScreen>
